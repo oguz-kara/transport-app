@@ -1,0 +1,77 @@
+.container {
+  background-color: #ffc61a;
+  font-size: 0.9rem;
+  .wideScreen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1244px;
+    margin: 0 auto;
+    padding: 9px;
+
+    .leftSide {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 65%;
+      font-weight: 500;
+      font-family: "Fira Sans Condensed", sans-serif;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 5px;
+        }
+      }
+
+      .socialLinks {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > svg:hover {
+          color: #fff;
+        }
+      }
+    }
+    .rightSide {
+      display: flex;
+      align-items: center;
+      .getTaxiLink {
+        border: 1px solid #1f1f1f;
+        border-radius: 20px;
+        padding: 5px 20px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 17px;
+        transition: all 500ms ease;
+
+        &:hover {
+          color: #ffc61a;
+          background-color: #1f1f1f;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 748px) {
+  .leftSide {
+    justify-content: flex-start !important;
+  }
+  .getTaxiPark {
+    display: none !important;
+  }
+
+  .adress {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .socialLinks {
+    display: none !important;
+  }
+}
