@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 80px;
+  margin: 80px 0;
 
   .top {
     display: flex;
@@ -89,6 +89,7 @@
             border-radius: 5px;
             border: 1px solid #cccccc;
             input {
+              border-radius: 5px;
               border: none;
               flex-grow: 11;
               padding: 13px 18px;

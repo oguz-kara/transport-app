@@ -1,0 +1,86 @@
+.container {
+  .colorYellow {
+    color: #ffc61a;
+  }
+  background: #1f1f1f;
+  color: #cccccc;
+  .top {
+    display: grid;
+    padding: 100px 0;
+
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    max-width: 1344px;
+    p {
+      line-height: 1.7em;
+      font-size: 14px;
+      margin: 0 0 60px;
+    }
+    & > div {
+      h4 {
+        color: #ffc61a;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: "Fira Sans Condensed", sans-serif;
+      }
+    }
+
+    .column1 {
+      margin-right: 30px;
+    }
+
+    .column2 {
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-right: 30px;
+
+        & > div {
+          display: flex;
+          align-items: center;
+          padding: 5px 0;
+          border-bottom: 1px dashed #cccccc;
+          margin-right: 30px;
+          .chevronIcon {
+            color: #ffc61a;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .column3 {
+      & > div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .icon {
+          font-size: 16px;
+          margin-right: 10px;
+          color: #ffc61a;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    background: #000;
+    overflow: hidden;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1344px;
+      margin: 0 auto;
+    }
+    .image {
+      transition: all 300ms ease;
+      transform: translateY(40px);
+      &:hover {
+        transform: translateY(10px);
+      }
+    }
+  }
+}

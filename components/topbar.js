@@ -1,12 +1,7 @@
 import styles from "../styles/topbar.module.scss";
 import Link from "next/link";
-import {
-  Phone,
-  Twitter,
-  Facebook,
-  Instagram,
-  Pinterest,
-} from "@material-ui/icons";
+import { Phone } from "@material-ui/icons";
+import SocialLinks from "./social-links";
 
 export default function Topbar() {
   return (
@@ -25,20 +20,7 @@ export default function Topbar() {
             <Phone fontSize="small" />
             <span>43 2-ND AVENUE, NEW YORK, 29004-7153</span>
           </div>
-          <div className={styles.socialLinks}>
-            <Link className={styles.socialLink} href="/" passHref>
-              <Twitter style={{ fontSize: "18px" }} />
-            </Link>
-            <Link className={styles.socialLink} href="/" passHref>
-              <Facebook style={{ fontSize: "18px" }} />
-            </Link>
-            <Link className={styles.socialLink} href="/" passHref>
-              <Instagram style={{ fontSize: "18px" }} />
-            </Link>
-            <Link className={styles.socialLink} href="/" passHref>
-              <Pinterest style={{ fontSize: "18px" }} />
-            </Link>
-          </div>
+          <SocialLinks fontSize="18px" />
         </div>
         <div className={styles.rightSide}>
           <Link href="/taxi" passHref>
