@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Fira Sans Condensed", sans-serif;
+    margin-bottom: 30px;
+
+    h4 {
+      color: #ffc61a;
+      font-size: 24px;
+      margin: 12px;
+    }
+    h3 {
+      font-size: 30px;
+      color: #1f1f1f;
+    }
+  }
+
+  .bottom {
+    .info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      border-radius: 8px;
+      background-clip: padding-box;
+      max-width: 570px;
+      margin: 0 auto;
+      padding: 45px 30px 30px;
+      background-color: #ffc61a;
+
+      .tripType {
+        margin-bottom: 10px;
+        span {
+          border-radius: 4px;
+          background-clip: padding-box;
+          display: inline-block;
+          vertical-align: middle;
+          /* font-family: 'Fjalla One', sans-serif; */
+          font-family: "Fira Sans Condensed", sans-serif;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #1f1f1f;
+          width: 115px;
+          height: 72px;
+          background-repeat: no-repeat;
+          background-position: 50% 36%;
+          text-align: center;
+          padding: 42px 0 10px;
+          margin-left: 12px;
+          transition: background 0.4s ease;
+          cursor: pointer;
+          line-height: 26px;
+          font-weight: 600;
+        }
+        .type1 {
+          background-image: url(/assets/images/_icon-car-1.png);
+        }
+        .type2 {
+          background-image: url(/assets/images/_icon-car-2.png);
+        }
+        .type3 {
+          background-image: url(/assets/images/_icon-car-3.png);
+          color: #b4340a;
+        }
+        .type4 {
+          background-image: url(/assets/images/_icon-car-4.png);
+        }
+      }
+      .form {
+        .row {
+          display: grid;
+          grid-gap: 5px;
+          grid-template-columns: 1fr 1fr;
+          margin-bottom: 30px;
+
+          .inputContainer {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            input {
+              border: none;
+              flex-grow: 11;
+              padding: 13px 18px;
+              &:focus {
+                outline: none;
+              }
+            }
+            .formIcon {
+              flex-grow: 1;
+              color: #cccccc;
+            }
+          }
+        }
+      }
+    }
+    .buttonContainer {
+      text-align: center;
+      .submit {
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 17px 60px;
+        background-color: #1f1f1f;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        font-family: inherit;
+        font-weight: 700;
+      }
+    }
+  }
+}

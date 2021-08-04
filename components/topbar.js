@@ -26,28 +26,16 @@ export default function Topbar() {
             <span>43 2-ND AVENUE, NEW YORK, 29004-7153</span>
           </div>
           <div className={styles.socialLinks}>
-            <Link className={styles.socialLink} href="www.twitter.com" passHref>
+            <Link className={styles.socialLink} href="/" passHref>
               <Twitter style={{ fontSize: "18px" }} />
             </Link>
-            <Link
-              className={styles.socialLink}
-              href="www.facebook.com"
-              passHref
-            >
+            <Link className={styles.socialLink} href="/" passHref>
               <Facebook style={{ fontSize: "18px" }} />
             </Link>
-            <Link
-              className={styles.socialLink}
-              href="www.facebook.com"
-              passHref
-            >
+            <Link className={styles.socialLink} href="/" passHref>
               <Instagram style={{ fontSize: "18px" }} />
             </Link>
-            <Link
-              className={styles.socialLink}
-              href="www.facebook.com"
-              passHref
-            >
+            <Link className={styles.socialLink} href="/" passHref>
               <Pinterest style={{ fontSize: "18px" }} />
             </Link>
           </div>

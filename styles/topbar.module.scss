@@ -7,12 +7,12 @@
     align-items: center;
     max-width: 1244px;
     margin: 0 auto;
-    padding: 9px;
+    padding: 9px 20px;
 
     .leftSide {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 65%;
       font-weight: 500;
       font-family: "Fira Sans Condensed", sans-serif;
@@ -71,7 +71,13 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .socialLinks {
-    display: none !important;
+  .container {
+    .wideScreen {
+      max-width: 1000px;
+
+      .socialLinks {
+        display: none;
+      }
+    }
   }
 }
