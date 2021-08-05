@@ -6,25 +6,29 @@
   height: 600px;
   flex-direction: column;
   color: #1f1f1f;
+  padding-bottom: 70px;
 
   .header {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 30px;
+
+    font-family: "Fira Sans Condensed", sans-serif;
 
     h4 {
       color: #ffc61a;
       font-size: 24px;
+      margin: 60px 0 20px;
     }
-    h3 {
+    h2 {
       color: #1f1f1f;
-      font-size: 48px;
+      font-size: 34px;
+      margin: -16px 0 30px;
     }
   }
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
     max-width: 1200px;
     margin: 0 auto;
     .card {
@@ -95,4 +99,21 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 748px) {
+  .container {
+    height: auto;
+    .cards {
+      grid-template-columns: 1fr;
+
+      .card {
+        margin: 15px;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
 }
