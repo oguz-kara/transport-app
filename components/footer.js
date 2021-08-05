@@ -14,7 +14,7 @@ export default function Footer() {
             Maecenas suscipit tellus sit amet augue placerat fringilla a id
             lacus. Fusce tincidunt in leo lacinia condimentum.
           </p>
-          <SocialLinks color="#ffc61a" fontSize="22px" />
+          <SocialLinks color="#ffc61a" fontSize="22px" show />
         </div>
         <div className={styles.column2}>
           <h4>explore</h4>
