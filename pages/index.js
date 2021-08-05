@@ -3,6 +3,7 @@ import Topbar from "../components/topbar";
 import GetTaxiForm from "../components/get-taxi-form";
 import styles from "../styles/Home.module.css";
 import TariffsSection from "../components/tariffs-section";
+import GetMobileSection from "../components/get-mobile-section";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
       <GetTaxiForm />
       <TariffsSection />
+      <GetMobileSection />
     </div>
   );
 }
