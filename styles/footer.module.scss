@@ -6,7 +6,7 @@
   color: #cccccc;
   .top {
     display: grid;
-    padding: 100px 0;
+    padding: 100px 30px;
 
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
@@ -29,9 +29,11 @@
 
     .column1 {
       margin-right: 30px;
+      margin-bottom: 30px;
     }
 
     .column2 {
+      margin-bottom: 30px;
       .row {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -55,9 +57,12 @@
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 13px;
 
         .icon {
           font-size: 16px;
+
           margin-right: 10px;
           color: #ffc61a;
         }
@@ -68,6 +73,8 @@
   .bottom {
     background: #000;
     overflow: hidden;
+    font-size: 14px;
+    color: #868686;
     & > div {
       display: flex;
       align-items: center;
@@ -81,6 +88,42 @@
       &:hover {
         transform: translateY(10px);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 748px) {
+  .container {
+    .top {
+      padding: 30px 20px;
+      .column1 {
+        margin-bottom: 30px;
+      }
+      .column2 {
+        display: none;
+      }
+      & > div {
+        h4 {
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        margin: 0 0 20px;
+      }
+    }
+    .bottom {
+      padding: 40px 20px;
+      .image {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    .top {
+      grid-template-columns: 1fr;
     }
   }
 }

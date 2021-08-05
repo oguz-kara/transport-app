@@ -7,7 +7,7 @@ export default function TariffsSection() {
     <div className={styles.container}>
       <header className={styles.header}>
         <h4>see our</h4>
-        <h3>tariffs</h3>
+        <h2>tariffs</h2>
       </header>
       <div className={styles.cards}>
         <div className={styles.card}>

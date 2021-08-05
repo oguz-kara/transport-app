@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 80px 0;
+  max-width: 100%;
 
   .top {
     display: flex;
@@ -38,6 +39,9 @@
       background-color: #ffc61a;
 
       .tripType {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 10px;
         span {
           border-radius: 4px;
@@ -120,4 +124,39 @@
       }
     }
   }
+}
+@media only screen and (max-width: 748px) {
+  .container {
+    margin: 15px;
+    .bottom {
+      form {
+        .tripType {
+          flex-wrap: wrap;
+          span {
+            margin: 0;
+          }
+        }
+
+        .form {
+          .row {
+            grid-template-columns: 1fr;
+            margin-bottom: 0;
+            grid-gap: 0;
+
+            .inputContainer {
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+      .buttonContainer {
+        .submit {
+          margin: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
 }

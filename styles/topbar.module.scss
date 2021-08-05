@@ -1,13 +1,14 @@
 .container {
   background-color: #ffc61a;
-  font-size: 0.9rem;
+  font-size: 16px;
+  line-height: 1.6em;
+  padding: 7px 10px;
   .wideScreen {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1244px;
     margin: 0 auto;
-    padding: 9px 20px;
 
     .leftSide {
       display: flex;
@@ -31,12 +32,13 @@
       .getTaxiLink {
         border: 1px solid #1f1f1f;
         border-radius: 20px;
-        padding: 5px 20px;
+        padding: 5px 18px;
         text-transform: uppercase;
         font-size: 11px;
         font-weight: 700;
         line-height: 17px;
         transition: all 500ms ease;
+        width: 135px;
 
         &:hover {
           color: #ffc61a;
