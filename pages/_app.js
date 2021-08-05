@@ -1,16 +1,26 @@
 import "../styles/globals.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Topbar from "../components/topbar";
-import Navbar from "../components/navbar";
+import Navbar, { MbNavbar } from "../components/navbar";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
+  const [show, setShow] = useState(false);
+
+  const showNavbar = (e) => {
+    setShow(true);
+  };
+  const hideNavbar = (e) => {
+    setShow(false);
+  };
+
   return (
     <>
       <Topbar />
-      <Navbar />
+      <Navbar onClick={showNavbar} />
+      <MbNavbar active={show} onClick={hideNavbar} />
       <Hero />
       <Component {...pageProps} />
       <Footer />
