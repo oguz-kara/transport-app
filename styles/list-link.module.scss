@@ -1,0 +1,48 @@
+.listItem {
+  padding: 20px 40px;
+  color: #1f1f1f;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  .collapseHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    line-height: 70px;
+  }
+  .navbarLink {
+    padding: 10px 0;
+  }
+  .chevronRightIcon {
+    font-size: 30px;
+  }
+  .rotate90 {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+  .collapseMenu.active {
+    height: auto;
+    transform: scaleY(1);
+  }
+  .collapseMenu {
+    margin-left: 20px;
+    line-height: 30px;
+    transform-origin: top;
+    transform: scaleY(0);
+    height: 0;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    li {
+      padding: 5px 0;
+      font-size: 23px;
+    }
+  }
+}
+.hoverBgWhite:hover {
+  background-color: #fff;
+}
