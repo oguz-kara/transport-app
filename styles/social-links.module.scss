@@ -24,3 +24,71 @@
     display: none !important;
   }
 }
+
+/*
+.container {
+    .nav {
+      max-width: 1000px;
+      .navbarLinks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #ffc61a;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+
+        ul {
+          padding: 0;
+          flex-direction: column;
+          align-items: start;
+          .listItem {
+            height: auto;
+            width: 100%;
+            padding: 20px 40px;
+            color: #1f1f1f;
+            font-weight: 900;
+            font-size: 27px;
+            line-height: 20px;
+            font-family: "Open Sans", sans-serif;
+            text-transform: capitalize;
+            flex-direction: column;
+
+            &:hover {
+              background-color: #fff;
+            }
+            .navbarLink {
+              width: 100%;
+              justify-content: space-between;
+              .chevronRightIcon {
+                color: #1f1f1f;
+                font-size: 32px;
+              }
+            }
+
+            .collapseMenu {
+              display: flex;
+              flex-direction: column;
+              transform: scaleY(0);
+              width: 100%;
+              overflow: hidden;
+              height: auto;
+              opacity: 1;
+              transform-origin: top;
+              background-color: transparent;
+              transform: scaleX(1);
+              transition: opacity 400ms ease, transform 400ms ease,
+                margin 400ms ease;
+              position: relative;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      #hamburger {
+        display: inline-block;
+      }
+    }
+  }
+
+*/

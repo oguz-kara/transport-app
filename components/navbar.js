@@ -1,9 +1,68 @@
+import ListLink from "./list-link";
 import styles from "../styles/navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight } from "@material-ui/icons";
+import { ChevronRight, Close } from "@material-ui/icons";
 
-export default function Navbar() {
+export function MbNavbar({ active, onClick }) {
+  return (
+    <div className={`${styles.mbNav} ${active && styles.active}`}>
+      <div className={styles.exitContainer}>
+        <button onClick={(e) => onClick(e)}>
+          <Close style={{ fontSize: 50, margin: "15px 30px 15px 0" }} />
+        </button>
+      </div>
+      <ul>
+        <ListLink
+          collapseable
+          items={[
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+          ]}
+        >
+          home
+        </ListLink>
+        <ListLink>get taxi</ListLink>
+        <ListLink>services</ListLink>
+        <ListLink
+          collapseable
+          items={[
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+          ]}
+        >
+          our blog
+        </ListLink>
+        <ListLink
+          collapseable
+          items={[
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+          ]}
+        >
+          gallery
+        </ListLink>
+        <ListLink>testimonials</ListLink>
+        <ListLink>contact</ListLink>
+        <ListLink
+          collapseable
+          items={[
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+            { href: "/", name: "some link" },
+          ]}
+        >
+          pages
+        </ListLink>
+      </ul>
+    </div>
+  );
+}
+
+export default function Navbar({ onClick }) {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
@@ -19,28 +78,30 @@ export default function Navbar() {
           <ul>
             <li className={styles.listItem}>
               <Link href="/" passHref>
-                <a>
-                  home
-                  <ChevronRight className={styles.chevronRightIcon} />
-                  <ul className={styles.collapseMenu}>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                  </ul>
+                <a className={styles.navbarLink}>
+                  <span>home</span>
+                  <span>
+                    <ChevronRight className={styles.chevronRightIcon} />
+                  </span>
                 </a>
               </Link>
+              <ul className={styles.collapseMenu}>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link 2
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className={styles.listItem}>
               <Link href="/" passHref>
@@ -54,53 +115,57 @@ export default function Navbar() {
             </li>
             <li className={styles.listItem}>
               <Link href="/" passHref>
-                <a>
-                  our blog
-                  <ChevronRight className={styles.chevronRightIcon} />
-                  <ul className={styles.collapseMenu}>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                  </ul>
+                <a className={styles.navbarLink}>
+                  <span>our blog</span>
+                  <span>
+                    <ChevronRight className={styles.chevronRightIcon} />
+                  </span>
                 </a>
               </Link>
+              <ul className={styles.collapseMenu}>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link 2
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className={styles.listItem}>
               <Link href="/" passHref>
-                <a>
-                  gallery
-                  <ChevronRight className={styles.chevronRightIcon} />
-                  <ul className={styles.collapseMenu}>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                  </ul>
+                <a className={styles.navbarLink}>
+                  <span>gallery</span>
+                  <span>
+                    <ChevronRight className={styles.chevronRightIcon} />
+                  </span>
                 </a>
               </Link>
+              <ul className={styles.collapseMenu}>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link 2
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className={styles.listItem}>
               <Link href="/" passHref>
@@ -114,32 +179,34 @@ export default function Navbar() {
             </li>
             <li className={styles.listItem}>
               <Link href="/" passHref>
-                <a>
-                  pages
-                  <ChevronRight className={styles.chevronRightIcon} />
-                  <ul className={styles.collapseMenu}>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passHref>
-                        Some link
-                      </Link>
-                    </li>
-                  </ul>
+                <a className={styles.navbarLink}>
+                  <span>pages</span>
+                  <span>
+                    <ChevronRight className={styles.chevronRightIcon} />
+                  </span>
                 </a>
               </Link>
+              <ul className={styles.collapseMenu}>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link 2
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" passHref>
+                    Some link
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
-        <div id={styles.hamburger}>
+        <div id={styles.hamburger} onClick={(e) => onClick(e)}>
           <div></div>
           <div></div>
           <div></div>

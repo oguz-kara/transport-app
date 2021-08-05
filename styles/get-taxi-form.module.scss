@@ -38,47 +38,6 @@
       padding: 45px 30px 30px;
       background-color: #ffc61a;
 
-      .tripType {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-        span {
-          border-radius: 4px;
-          background-clip: padding-box;
-          display: inline-block;
-          vertical-align: middle;
-          /* font-family: 'Fjalla One', sans-serif; */
-          font-family: "Fira Sans Condensed", sans-serif;
-          font-size: 12px;
-          text-transform: uppercase;
-          color: #1f1f1f;
-          width: 115px;
-          height: 72px;
-          background-repeat: no-repeat;
-          background-position: 50% 36%;
-          text-align: center;
-          padding: 42px 0 10px;
-          margin-left: 12px;
-          transition: background 0.4s ease;
-          cursor: pointer;
-          line-height: 26px;
-          font-weight: 600;
-        }
-        .type1 {
-          background-image: url(/assets/images/_icon-car-1.png);
-        }
-        .type2 {
-          background-image: url(/assets/images/_icon-car-2.png);
-        }
-        .type3 {
-          background-image: url(/assets/images/_icon-car-3.png);
-          color: #b4340a;
-        }
-        .type4 {
-          background-image: url(/assets/images/_icon-car-4.png);
-        }
-      }
       .form {
         .row {
           display: grid;
@@ -91,14 +50,17 @@
             align-items: center;
             background-color: #fff;
             border-radius: 5px;
-            border: 1px solid #cccccc;
             input {
               border-radius: 5px;
               border: none;
               flex-grow: 11;
-              padding: 13px 18px;
+              padding: 20px 18px;
               &:focus {
                 outline: none;
+              }
+              &::placeholder {
+                font-size: 16px;
+                font-weight: 400;
               }
             }
             .formIcon {

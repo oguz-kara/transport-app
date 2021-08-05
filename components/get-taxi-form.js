@@ -4,6 +4,7 @@ import Image from "next/image";
 // icons
 
 import { LocationOn, Phone, DateRange } from "@material-ui/icons";
+import TripTypes from "./trip-types";
 
 export default function GetTaxiForm() {
   return (
@@ -17,30 +18,45 @@ export default function GetTaxiForm() {
       <div className={styles.bottom}>
         <div className={styles.info}>Also you can order a taxi online</div>
         <form>
-          <div className={styles.tripType}>
-            <span className={styles.type1}>standart</span>
-            <span className={styles.type2}>business</span>
-            <span className={styles.type3}>vip</span>
-            <span className={styles.type4}>bus-minivan</span>
-          </div>
+          <TripTypes />
           <div className={styles.form}>
             <div className={styles.row}>
               <div className={styles.inputContainer}>
-                <input type="text" name="fromAdress" id="fromAdress" />
+                <input
+                  type="text"
+                  name="fromAdress"
+                  id="fromAdress"
+                  placeholder="From Adress..."
+                />
                 <LocationOn className={styles.formIcon} />
               </div>
               <div className={styles.inputContainer}>
-                <input type="text" name="toAdress" id="toAdress" />
+                <input
+                  type="text"
+                  name="toAdress"
+                  id="toAdress"
+                  placeholder="To Adress..."
+                />
                 <LocationOn className={styles.formIcon} />
               </div>
             </div>
             <div className={styles.row}>
               <div className={styles.inputContainer}>
-                <input type="text" name="phoneNumber" id="phoneNumber" />
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  placeholder="Phone Number"
+                />
                 <Phone className={styles.formIcon} />
               </div>
               <div className={styles.inputContainer}>
-                <input type="text" name="dateTime" id="dateTime" />
+                <input
+                  type="text"
+                  name="dateTime"
+                  id="dateTime"
+                  placeholder="Date and Time"
+                />
                 <DateRange className={styles.formIcon} />
               </div>
             </div>
