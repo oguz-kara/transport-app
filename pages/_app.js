@@ -1,6 +1,5 @@
 import "../styles/globals.css";
-import { useEffect, useState } from "react";
-import Head from "next/head";
+import { useState } from "react";
 import Topbar from "../components/topbar";
 import Navbar, { MbNavbar } from "../components/navbar";
 import Hero from "../components/hero";

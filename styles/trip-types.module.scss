@@ -1,0 +1,45 @@
+.tripTypes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  .tripType {
+    border-radius: 4px;
+    background-clip: padding-box;
+    display: inline-block;
+    vertical-align: middle;
+    /* font-family: 'Fjalla One', sans-serif; */
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1f1f1f;
+    width: 115px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-position: 50% 36%;
+    text-align: center;
+    padding: 42px 0 10px;
+    margin-left: 12px;
+    transition: background 0.4s ease;
+    cursor: pointer;
+    line-height: 26px;
+    font-weight: 600;
+  }
+  .tripType.active {
+    background-color: #fff;
+  }
+
+  .type1 {
+    background-image: url(/assets/images/_icon-car-1.png);
+  }
+  .type2 {
+    background-image: url(/assets/images/_icon-car-2.png);
+  }
+  .type3 {
+    background-image: url(/assets/images/_icon-car-3.png);
+    color: #b4340a;
+  }
+  .type4 {
+    background-image: url(/assets/images/_icon-car-4.png);
+  }
+}
