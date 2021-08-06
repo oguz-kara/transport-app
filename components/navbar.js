@@ -62,9 +62,12 @@ export function MbNavbar({ active, onClick }) {
   );
 }
 
-export default function Navbar({ onClick }) {
+export default function Navbar({ onClick, type }) {
+  const getClass = (type) => {
+    return type === "static" ? styles.navbarStatic : styles.navbarMain;
+  };
   return (
-    <div className={styles.container}>
+    <div className={getClass(type)}>
       <nav className={styles.nav}>
         <div className={styles.navbarBrand}>
           <Image
@@ -74,138 +77,136 @@ export default function Navbar({ onClick }) {
             height={42}
           />
         </div>
-        <div className={styles.navbarLinks}>
-          <ul>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                <a className={styles.navbarLink}>
-                  <span>home</span>
-                  <span>
-                    <ChevronRight className={styles.chevronRightIcon} />
-                  </span>
-                </a>
-              </Link>
-              <ul className={styles.collapseMenu}>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link 2
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                get taxi
-              </Link>
-            </li>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                services
-              </Link>
-            </li>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                <a className={styles.navbarLink}>
-                  <span>our blog</span>
-                  <span>
-                    <ChevronRight className={styles.chevronRightIcon} />
-                  </span>
-                </a>
-              </Link>
-              <ul className={styles.collapseMenu}>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link 2
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                <a className={styles.navbarLink}>
-                  <span>gallery</span>
-                  <span>
-                    <ChevronRight className={styles.chevronRightIcon} />
-                  </span>
-                </a>
-              </Link>
-              <ul className={styles.collapseMenu}>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link 2
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                testimonials
-              </Link>
-            </li>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                contact
-              </Link>
-            </li>
-            <li className={styles.listItem}>
-              <Link href="/" passHref>
-                <a className={styles.navbarLink}>
-                  <span>pages</span>
-                  <span>
-                    <ChevronRight className={styles.chevronRightIcon} />
-                  </span>
-                </a>
-              </Link>
-              <ul className={styles.collapseMenu}>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link 2
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" passHref>
-                    Some link
-                  </Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+        <ul className={styles.navbarLinks}>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              <a className={styles.navbarLink}>
+                <span>home</span>
+                <span>
+                  <ChevronRight className={styles.chevronRightIcon} />
+                </span>
+              </a>
+            </Link>
+            <ul className={styles.collapseMenu}>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link 2
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              get taxi
+            </Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              services
+            </Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              <a className={styles.navbarLink}>
+                <span>our blog</span>
+                <span>
+                  <ChevronRight className={styles.chevronRightIcon} />
+                </span>
+              </a>
+            </Link>
+            <ul className={styles.collapseMenu}>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link 2
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              <a className={styles.navbarLink}>
+                <span>gallery</span>
+                <span>
+                  <ChevronRight className={styles.chevronRightIcon} />
+                </span>
+              </a>
+            </Link>
+            <ul className={styles.collapseMenu}>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link 2
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              testimonials
+            </Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              contact
+            </Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link href="/" passHref>
+              <a className={styles.navbarLink}>
+                <span>pages</span>
+                <span>
+                  <ChevronRight className={styles.chevronRightIcon} />
+                </span>
+              </a>
+            </Link>
+            <ul className={styles.collapseMenu}>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link 2
+                </Link>
+              </li>
+              <li>
+                <Link href="/" passHref>
+                  Some link
+                </Link>
+              </li>
+            </ul>
+          </li>
+        </ul>
         <div id={styles.hamburger} onClick={(e) => onClick(e)}>
           <div></div>
           <div></div>
