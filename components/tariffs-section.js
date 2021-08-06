@@ -1,13 +1,16 @@
 import styles from "../styles/tariff-section.module.scss";
 import Image from "next/image";
 import StarIcon from "@material-ui/icons/Star";
+import Text from "./text";
 
-export default function TariffsSection() {
+export default function TariffsSection({ yellowTitle, title }) {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h4>see our</h4>
-        <h2>tariffs</h2>
+        <Text type="yellow">{yellowTitle}</Text>
+        <Text type="h1" size="xLarge">
+          {title}
+        </Text>
       </header>
       <div className={styles.cards}>
         <div className={styles.card}>

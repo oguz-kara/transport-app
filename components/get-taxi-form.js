@@ -5,19 +5,26 @@ import Image from "next/image";
 
 import { LocationOn, Phone, DateRange } from "@material-ui/icons";
 import TripTypes from "./trip-types";
+import Text from "./text";
 
-export default function GetTaxiForm() {
+export default function GetTaxiForm({ noHeader, fullWidth }) {
+  const classFw = fullWidth ? styles.fullWidth : "";
   return (
-    <section className={styles.container}>
-      <div className={styles.top}>
-        <h4 className={styles.title}>
-          OUR OPERATORS ARE WAITING FOR YOUR CALL:
-        </h4>
-        <h3 className={styles.phoneNumber}>800-5-800</h3>
-      </div>
+    <section className={`${styles.container} ${classFw}`}>
+      {!noHeader && (
+        <div className={styles.top}>
+          <Text type="yellow">OUR OPERATORS ARE WAITING FOR YOUR CALL:</Text>
+          <Text type="h1">800-5-500</Text>
+        </div>
+      )}
       <div className={styles.bottom}>
-        <div className={styles.info}>Also you can order a taxi online</div>
-        <form>
+        {!noHeader && (
+          <div className={styles.info}>Also you can order a taxi online</div>
+        )}
+        <form
+          className={classFw}
+          style={{ padding: fullWidth && "200px 100px 100px 100px" }}
+        >
           <TripTypes />
           <div className={styles.form}>
             <div className={styles.row}>
@@ -39,8 +46,6 @@ export default function GetTaxiForm() {
                 />
                 <LocationOn className={styles.formIcon} />
               </div>
-            </div>
-            <div className={styles.row}>
               <div className={styles.inputContainer}>
                 <input
                   type="text"

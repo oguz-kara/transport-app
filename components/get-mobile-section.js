@@ -1,13 +1,16 @@
 import styles from "../styles/get-mobile-section.module.scss";
 import Link from "next/link";
+import Text from "./text";
 
 export default function GetMobileSection() {
   return (
     <section className={styles.container}>
       <div className={styles.parallax}>
         <div className={styles.header}>
-          <h4>GET MORE BENEFITS</h4>
-          <h3>DOWNLOAD THE APP</h3>
+          <Text type="yellow">get more benefits</Text>
+          <Text type="h1" size="xLarge" style={{ color: "#fff" }}>
+            DOWNLOAD THE APP
+          </Text>
         </div>
         <div className={styles.main}>
           <div id={styles.column1} className={styles.column}>
