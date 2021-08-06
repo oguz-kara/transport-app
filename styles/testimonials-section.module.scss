@@ -1,12 +1,19 @@
 .container {
-  padding: 0 41px;
+  padding: 0 41px 30px 41px;
   font-family: "Open Sans";
   .header {
   }
 
   .testimonials {
     display: flex;
+    transition: transform 1s ease;
     overflow-x: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scroll-behavior: smooth;
     .testimonial {
       position: relative;
       background-color: #fff;
@@ -42,6 +49,20 @@
             border-radius: 50%;
           }
         }
+      }
+    }
+  }
+  .actions {
+    text-align: center;
+    button {
+      margin: 0 5px;
+      background-color: #ffc61a;
+      color: #fff;
+      border: none;
+      transition: background 250ms ease-in-out;
+
+      &:hover {
+        background-color: #1f1f1f;
       }
     }
   }

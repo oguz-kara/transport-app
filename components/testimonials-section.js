@@ -1,9 +1,58 @@
 import styles from "../styles/testimonials-section.module.scss";
-import { FormatQuote } from "@material-ui/icons";
+import { FormatQuote, ArrowBack, ArrowForward } from "@material-ui/icons";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Text from "./text";
 
+const data = [
+  {
+    id: 1,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 2,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 3,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 4,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 5,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+];
+
 export default function TestimonialsSection() {
+  const testimonialsConEl = useRef(null);
+  const testimonialEl = useRef(null);
+
+  const handleClick = (direction) => {
+    console.log(testimonialsConEl.current.getBoundingClientRect());
+    if (direction === "left") {
+      testimonialsConEl.current.style.transform = `translateX(-281px)`;
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -12,83 +61,30 @@ export default function TestimonialsSection() {
           testimonials
         </Text>
       </div>
-      <div className={styles.testimonials}>
-        <div className={styles.testimonial}>
-          <div className={styles.comment}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            soluta praesentium reiciendis facilis quasi. Dolore in minima
-            dolorem eius consequatur.
-          </div>
-          <div className={styles.quote}>
-            <FormatQuote style={{ fontSize: 60, color: "#e6e6e6" }} />{" "}
-            <div className={styles.author}>steven rashford</div>
-            <div className={styles.avatar}>
-              <Image
-                width={46}
-                height={46}
-                src="/assets/images/_client-1.jpg"
-                alt="avatar"
-              />
+      <div className={styles.testimonials} ref={testimonialsConEl}>
+        {data.map((item, index) => (
+          <div key={index} className={styles.testimonial} ref={testimonialEl}>
+            <div className={styles.comment}>{item.comment}</div>
+            <div className={styles.quote}>
+              <FormatQuote style={{ fontSize: 60, color: "#e6e6e6" }} />{" "}
+              <div className={styles.author}>{item.author}</div>
+              <div className={styles.avatar}>
+                <Image width={46} height={46} src={item.src} alt="avatar" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.testimonial}>
-          <div className={styles.comment}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            soluta praesentium reiciendis facilis quasi. Dolore in minima
-            dolorem eius consequatur.
-          </div>
-          <div className={styles.quote}>
-            <FormatQuote style={{ fontSize: 60, color: "#e6e6e6" }} />{" "}
-            <div className={styles.author}>steven rashford</div>
-            <div className={styles.avatar}>
-              <Image
-                width={46}
-                height={46}
-                src="/assets/images/_client-1.jpg"
-                alt="avatar"
-              />
-            </div>
-          </div>
-        </div>
-        <div className={styles.testimonial}>
-          <div className={styles.comment}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            soluta praesentium reiciendis facilis quasi. Dolore in minima
-            dolorem eius consequatur.
-          </div>
-          <div className={styles.quote}>
-            <FormatQuote style={{ fontSize: 60, color: "#e6e6e6" }} />{" "}
-            <div className={styles.author}>steven rashford</div>
-            <div className={styles.avatar}>
-              <Image
-                width={46}
-                height={46}
-                src="/assets/images/_client-1.jpg"
-                alt="avatar"
-              />
-            </div>
-          </div>
-        </div>
-        <div className={styles.testimonial}>
-          <div className={styles.comment}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            soluta praesentium reiciendis facilis quasi. Dolore in minima
-            dolorem eius consequatur.
-          </div>
-          <div className={styles.quote}>
-            <FormatQuote style={{ fontSize: 60, color: "#e6e6e6" }} />{" "}
-            <div className={styles.author}>steven rashford</div>
-            <div className={styles.avatar}>
-              <Image
-                width={46}
-                height={46}
-                src="/assets/images/_client-1.jpg"
-                alt="avatar"
-              />
-            </div>
-          </div>
-        </div>
+        ))}
+      </div>
+      <div className={styles.actions}>
+        <button className={styles.back} onClick={(e) => handleClick("left")}>
+          <ArrowBack />
+        </button>
+        <button
+          className={styles.forward}
+          onClick={(e) => handleClick("right")}
+        >
+          <ArrowForward />
+        </button>
       </div>
     </div>
   );
