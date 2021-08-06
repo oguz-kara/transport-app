@@ -23,7 +23,7 @@ export function MbNavbar({ active, onClick }) {
         >
           home
         </ListLink>
-        <ListLink>get taxi</ListLink>
+        <ListLink href="/get-taxi">get taxi</ListLink>
         <ListLink>services</ListLink>
         <ListLink
           collapseable
@@ -106,7 +106,7 @@ export default function Navbar({ onClick, type }) {
             </ul>
           </li>
           <li className={styles.listItem}>
-            <Link href="/" passHref>
+            <Link href="/get-taxi" passHref>
               get taxi
             </Link>
           </li>

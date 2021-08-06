@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../styles/list-link.module.scss";
 import { ChevronRight } from "@material-ui/icons";
 
-export default function ListLink({ collapseable, children, items }) {
+export default function ListLink({ collapseable, children, items, href }) {
   const [show, setShow] = useState(false);
 
   const handleClick = (e) => {
@@ -18,7 +18,7 @@ export default function ListLink({ collapseable, children, items }) {
       onClick={(e) => handleClick(e)}
     >
       {!collapseable ? (
-        <Link href="/get-taxi" passHref>
+        <Link href={href ? href : "/"} passHref>
           <a className={styles.navbarLink}>
             <span>{children}</span>
           </a>

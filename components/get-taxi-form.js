@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { LocationOn, Phone, DateRange } from "@material-ui/icons";
 import TripTypes from "./trip-types";
+import Text from "./text";
 
 export default function GetTaxiForm({ noHeader, fullWidth }) {
   const classFw = fullWidth ? styles.fullWidth : "";
@@ -12,10 +13,8 @@ export default function GetTaxiForm({ noHeader, fullWidth }) {
     <section className={`${styles.container} ${classFw}`}>
       {!noHeader && (
         <div className={styles.top}>
-          <h4 className={styles.title}>
-            OUR OPERATORS ARE WAITING FOR YOUR CALL:
-          </h4>
-          <h3 className={styles.phoneNumber}>800-5-800</h3>
+          <Text type="yellow">OUR OPERATORS ARE WAITING FOR YOUR CALL:</Text>
+          <Text type="h1">800-5-500</Text>
         </div>
       )}
       <div className={styles.bottom}>

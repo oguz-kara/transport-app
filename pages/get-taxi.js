@@ -33,7 +33,7 @@ export default function GetTaxi() {
       <MbNavbar active={show} onClick={hideNavbar} />
       <Hero />
       <GetTaxiForm />
-      <TariffsSection />
+      <TariffsSection yellowTitle="see our" title="tariffs" />
       <GetMobileSection />
     </div>
   );
