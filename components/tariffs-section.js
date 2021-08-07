@@ -1,14 +1,31 @@
-import styles from "../styles/tariff-section.module.scss";
+import { useEffect } from "react";
+import styles from "../styles/tariffs-section.module.scss";
 import Image from "next/image";
 import StarIcon from "@material-ui/icons/Star";
 import Text from "./text";
+import useWindowSize from "../hooks/useWindowSize";
 
-export default function TariffsSection({ yellowTitle, title }) {
+export default function TariffsSection({
+  yellowTitle,
+  title,
+  backgroundUrl,
+  titleColor,
+}) {
+  const getBackground = (url) => {
+    if (url) {
+      return {
+        backgroundImage: `url(${url})`,
+        backgroundSize: "cover",
+      };
+    }
+    return {};
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={getBackground(backgroundUrl)}>
       <header className={styles.header}>
         <Text type="yellow">{yellowTitle}</Text>
-        <Text type="h1" size="xLarge">
+        <Text type="h1" size="xLarge" style={{ color: titleColor }}>
           {title}
         </Text>
       </header>

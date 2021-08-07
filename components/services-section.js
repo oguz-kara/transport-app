@@ -1,7 +1,7 @@
 import styles from "../styles/services-section.module.scss";
 import Text from "./text";
 import Image from "next/image";
-export default function ServicesSection() {
+export default function ServicesSection({ children }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -10,6 +10,13 @@ export default function ServicesSection() {
           our services
         </Text>
       </div>
+      {children && (
+        <div className={styles.description}>
+          <Text type="p" size="xSmall">
+            {children}
+          </Text>
+        </div>
+      )}
       <div className={styles.servicesContainer}>
         <div className={styles.service}>
           <div className={styles.image}>

@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.scss";
 import TariffsSection from "../components/tariffs-section";
 import GetMobileSection from "../components/get-mobile-section";
 import Topbar from "../components/topbar";
-import Navbar, { MbNavbar } from "../components/navbar";
+import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 
 export default function GetTaxi() {
@@ -30,7 +30,7 @@ export default function GetTaxi() {
       </Head>
       <Topbar />
       <Navbar onClick={showNavbar} />
-      <MbNavbar active={show} onClick={hideNavbar} />
+      <Navbar type="mobile" active={show} onClick={hideNavbar} />
       <Hero />
       <GetTaxiForm />
       <TariffsSection yellowTitle="see our" title="tariffs" />

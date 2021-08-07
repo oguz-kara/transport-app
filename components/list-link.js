@@ -13,7 +13,7 @@ export default function ListLink({ collapseable, children, items, href }) {
   return (
     <li
       className={`${styles.listItem} ${show && styles.active} ${
-        !show && styles.hoverBgWhite
+        !show && styles.bgWhite
       }`}
       onClick={(e) => handleClick(e)}
     >
