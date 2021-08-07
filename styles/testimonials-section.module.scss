@@ -1,12 +1,24 @@
 .container {
-  padding: 0 41px;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 41px 30px 41px;
   font-family: "Open Sans";
+  overflow: hidden;
   .header {
   }
 
   .testimonials {
-    display: flex;
-    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(9, 33.33%);
+    transition: transform 1s ease;
+    overflow-x: scroll;
+    padding: 10px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scroll-behavior: smooth;
     .testimonial {
       position: relative;
       background-color: #fff;
@@ -14,7 +26,6 @@
       text-align: center;
       margin: 0 20px 60px 20px;
       .comment {
-        width: 211px;
         color: #1f1f1f;
         font-style: italic;
         font-size: 14px;
@@ -44,5 +55,25 @@
         }
       }
     }
+  }
+  .actions {
+    text-align: center;
+    button {
+      margin: 0 5px;
+      background-color: #ffc61a;
+      color: #fff;
+      border: none;
+      transition: background 250ms ease-in-out;
+
+      &:hover {
+        background-color: #1f1f1f;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .actions {
+    display: none;
   }
 }
