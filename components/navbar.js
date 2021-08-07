@@ -373,7 +373,6 @@ function GetNavbar({ onClick, type, active }) {
       return <StaticNavbar onClick={onClick} />;
     case "mobile":
       return <MobileNavbar onClick={onClick} active={active} />;
-    case "whole":
     default:
       return <MainNavbar onClick={onClick} />;
   }
@@ -391,7 +390,7 @@ function WholeNavbar({ type }) {
   return (
     <>
       <GetNavbar type={type} onClick={showNavbar} />
-      <Navbar type="mobile" active={show} onClick={hideNavbar} />
+      <GetNavbar type="mobile" active={show} onClick={hideNavbar} />
     </>
   );
 }

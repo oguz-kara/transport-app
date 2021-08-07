@@ -29,8 +29,7 @@ export default function GetTaxi() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Topbar />
-      <Navbar onClick={showNavbar} />
-      <Navbar type="mobile" active={show} onClick={hideNavbar} />
+      <Navbar type="main" />
       <Hero />
       <GetTaxiForm />
       <TariffsSection yellowTitle="see our" title="tariffs" />
