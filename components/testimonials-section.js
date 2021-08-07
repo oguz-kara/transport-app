@@ -1,6 +1,7 @@
 import styles from "../styles/testimonials-section.module.scss";
 import { FormatQuote, ArrowBack, ArrowForward } from "@material-ui/icons";
 import { useRef, useEffect, useState } from "react";
+import useWindowSize from "../hooks/useWindowSize";
 import Image from "next/image";
 import Text from "./text";
 
@@ -40,16 +41,78 @@ const data = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
     src: "/assets/images/_client-1.jpg",
   },
+  {
+    id: 6,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 7,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 8,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 9,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 10,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
+  {
+    id: 11,
+    author: "Sara Jay",
+    comment:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+    src: "/assets/images/_client-1.jpg",
+  },
 ];
 
 export default function TestimonialsSection() {
   const testimonialsConEl = useRef(null);
   const testimonialEl = useRef(null);
+  const windowSize = useWindowSize();
+  const [state, setState] = useState(false);
+
+  useEffect(() => {
+    console.log("window size ", windowSize);
+    if (windowSize.width <= 748 && windowSize.width > 500) {
+      testimonialsConEl.current.style.gridTemplateColumns = `repeat(${data.length}, 50%)`;
+    } else if (windowSize.width <= 500) {
+      testimonialsConEl.current.style.gridTemplateColumns = `repeat(${data.length}, 100%)`;
+    } else {
+      testimonialsConEl.current.style.gridTemplateColumns = `repeat(${data.length}, 33.33%)`;
+    }
+  }, [windowSize]);
 
   const handleClick = (direction) => {
-    console.log(testimonialsConEl.current.getBoundingClientRect());
+    setState(true);
+    const width = testimonialEl.current.getBoundingClientRect().width;
+    // TODO get current margin value.
+    const scrollValue = width + 40;
+    const scrollPos = testimonialsConEl.current.scrollLeft;
+
     if (direction === "left") {
-      testimonialsConEl.current.style.transform = `translateX(-281px)`;
+      testimonialsConEl.current.scrollLeft = scrollPos - scrollValue;
+    } else {
+      testimonialsConEl.current.scrollLeft = scrollPos + scrollValue;
     }
   };
 
