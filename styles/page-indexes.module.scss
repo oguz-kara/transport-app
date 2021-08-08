@@ -5,27 +5,67 @@
   justify-content: space-evenly;
   margin: 30px auto;
 
+  .disabled {
+    color: #cabbbb !important;
+    cursor: not-allowed;
+    span.icon {
+      background-color: #cabbbb;
+    }
+    &:hover {
+      color: #cabbbb !important;
+    }
+    &:hover span.icon {
+      background-color: #cabbbb !important;
+    }
+  }
   button {
     border: none;
     background-color: transparent;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: all 250ms ease;
     &:hover {
-      color: #ffc61a;
     }
+    &:hover span.icon {
+      background-color: #000;
+    }
+  }
+  span.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #ffc61a;
+    transition: all 250ms ease;
   }
 
   .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span.icon {
+      margin-right: 5px;
+    }
   }
   .indexes {
-    margin: 25px;
+    margin: 20px;
     .index {
       margin: 0 10px;
     }
   }
 
   .next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span.icon {
+      margin-left: 5px;
+    }
   }
 }

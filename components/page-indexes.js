@@ -1,5 +1,6 @@
 import styles from "../styles/page-indexes.module.scss";
 import { useState, useEffect } from "react";
+import { ArrowRight, ArrowLeft } from "@material-ui/icons";
 
 export default function PageIndexes({ posts, data, updateCurrentCards }) {
   const getTotalPageCount = (length) => {
@@ -107,8 +108,15 @@ export default function PageIndexes({ posts, data, updateCurrentCards }) {
 
   return (
     <div className={styles.container}>
-      <button className={styles.back} onClick={(e) => handleBack(e)}>
-        prev
+      <button
+        className={`${styles.back} ${currentIndex === 1 && styles.disabled}`}
+        onClick={(e) => handleBack(e)}
+        disabled={currentIndex === 1}
+      >
+        <span className={styles.icon}>
+          <ArrowLeft />
+        </span>
+        <span>prev</span>
       </button>
       <div className={styles.indexes}>
         {viewedIndexes.map((index) => (
@@ -122,8 +130,17 @@ export default function PageIndexes({ posts, data, updateCurrentCards }) {
           </button>
         ))}
       </div>
-      <button className={styles.next} onClick={(e) => handleNext(e)}>
-        next
+      <button
+        className={`${styles.next}  ${
+          posts.length === currentIndex && styles.disabled
+        }`}
+        onClick={(e) => handleNext(e)}
+        disabled={posts.length === currentIndex}
+      >
+        <span>next</span>
+        <span className={styles.icon}>
+          <ArrowRight />
+        </span>
       </button>
     </div>
   );
