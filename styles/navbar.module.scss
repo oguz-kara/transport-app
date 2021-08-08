@@ -23,7 +23,7 @@
         font-weight: 700;
         font-size: 14px;
         margin: 0 10px;
-        a {
+        .listHeader {
           display: flex;
           align-items: center;
           position: relative;
@@ -138,7 +138,7 @@
         .chevronRightIcon:hover {
           transform: rotate(90deg);
         }
-        a.navbarLink {
+        .listHeader {
           display: flex;
           align-items: center;
           font-size: 16px;

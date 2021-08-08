@@ -1,0 +1,52 @@
+{
+  "navLinks": [
+    {
+      "name": "home",
+      "href": "/",
+      "innerLinks": [
+        {
+          "name": "some link 1",
+          "href": "/"
+        },
+        {
+          "name": "some link 1",
+          "href": "/"
+        },
+        {
+          "name": "some link 1",
+          "href": "/"
+        }
+      ]
+    },
+    {
+      "name": "get taxi",
+      "href": "/get-taxi",
+      "innerLinks": []
+    },
+    {
+      "name": "services",
+      "href": "/services",
+      "innerLinks": []
+    },
+    {
+      "name": "our blog",
+      "href": "/our-blog",
+      "innerLinks": []
+    },
+    {
+      "name": "gallery",
+      "href": "/gallery",
+      "innerLinks": []
+    },
+    {
+      "name": "testimonials",
+      "href": "/testimonials",
+      "innerLinks": []
+    },
+    {
+      "name": "contact",
+      "href": "/contact",
+      "innerLinks": []
+    }
+  ]
+}

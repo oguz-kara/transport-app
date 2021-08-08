@@ -4,6 +4,7 @@ import styles from "../styles/navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Close } from "@material-ui/icons";
+import fakeData from "../fake_data.json";
 
 function MobileNavbar({ active, onClick }) {
   return (
@@ -14,55 +15,16 @@ function MobileNavbar({ active, onClick }) {
         </button>
       </div>
       <ul>
-        <ListLink
-          collapseable
-          items={[
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-          ]}
-        >
-          home
-        </ListLink>
-        <ListLink href="/get-taxi">get taxi</ListLink>
-        <ListLink>services</ListLink>
-        <ListLink
-          collapseable
-          items={[
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-          ]}
-        >
-          our blog
-        </ListLink>
-        <ListLink
-          collapseable
-          items={[
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-          ]}
-        >
-          gallery
-        </ListLink>
-        <ListLink>testimonials</ListLink>
-        <ListLink>contact</ListLink>
-        <ListLink
-          collapseable
-          items={[
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-            { href: "/", name: "some link" },
-          ]}
-        >
-          pages
-        </ListLink>
+        {fakeData.navLinks.map((data, index) => (
+          <ListLink key={index} data={data}>
+            {data.name}
+          </ListLink>
+        ))}
       </ul>
     </div>
   );
 }
-function StaticNavbar({ onClick }) {
+function StaticNavbar({ onClick, data }) {
   return (
     <div className={styles.navbarStatic}>
       <nav className={styles.nav}>
@@ -75,38 +37,38 @@ function StaticNavbar({ onClick }) {
           />
         </div>
         <ul className={styles.navbarLinks}>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>home</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/get-taxi" passHref>
-              get taxi
-            </Link>
-          </li>
+          {
+            data.map((linkObj, index) =>
+              linkObj.innerLinks.length > 0 ? (
+                <li className={styles.listItem}>
+                  <div className={styles.listHeader}>
+                    <span>{linkObj.name}</span>
+                    <span>
+                      <ChevronRight className={styles.chevronRightIcon} />
+                    </span>
+                  </div>
+                  <ul className={styles.collapseMenu}>
+                    {linkObj.innerLinks.map((innerLink, index) => (
+                      <li key={index}>
+                        <Link href={innerLink.href} passHref>
+                          {innerLink.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li className={styles.listItem}>
+                  <Link href={linkObj.href} passHref>
+                    {linkObj.name}
+                  </Link>
+                </li>
+              )
+            )
+            /*
+          
+          
+          
           <li className={styles.listItem}>
             <Link href="/" passHref>
               services
@@ -203,6 +165,9 @@ function StaticNavbar({ onClick }) {
               </li>
             </ul>
           </li>
+          
+          */
+          }
         </ul>
         <div id={styles.hamburger} onClick={(e) => onClick(e)}>
           <div></div>
@@ -213,7 +178,7 @@ function StaticNavbar({ onClick }) {
     </div>
   );
 }
-function MainNavbar({ onClick }) {
+function MainNavbar({ onClick, data }) {
   return (
     <div className={styles.navbarMain}>
       <nav className={styles.nav}>
@@ -226,6 +191,34 @@ function MainNavbar({ onClick }) {
           />
         </div>
         <ul className={styles.navbarLinks}>
+          {data.map((dataObj, index) =>
+            dataObj.innerLinks.length > 0 ? (
+              <li key={index} className={styles.listItem}>
+                <div className={styles.listHeader}>
+                  <span>{dataObj.name}</span>
+                  <span>
+                    <ChevronRight className={styles.chevronRightIcon} />
+                  </span>
+                </div>
+                <ul className={styles.collapseMenu}>
+                  {dataObj.innerLinks.map((innerLink, index) => (
+                    <li key={index}>
+                      <Link href={innerLink.href} passHref>
+                        {innerLink.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li key={index} className={styles.listItem}>
+                <Link href={dataObj.href} passHref>
+                  {dataObj.name}
+                </Link>
+              </li>
+            )
+          )}
+          {/*
           <li className={styles.listItem}>
             <Link href="/" passHref>
               <a className={styles.navbarLink}>
@@ -354,6 +347,8 @@ function MainNavbar({ onClick }) {
               </li>
             </ul>
           </li>
+          
+          */}
         </ul>
         <div id={styles.hamburger} onClick={() => onClick()}>
           <div></div>
@@ -365,20 +360,20 @@ function MainNavbar({ onClick }) {
   );
 }
 
-function GetNavbar({ onClick, type, active }) {
+function GetNavbar({ onClick, type, active, data }) {
   switch (type) {
     case "main":
-      return <MainNavbar onClick={onClick} />;
+      return <MainNavbar onClick={onClick} data={data} />;
     case "static":
-      return <StaticNavbar onClick={onClick} />;
+      return <StaticNavbar onClick={onClick} data={data} />;
     case "mobile":
-      return <MobileNavbar onClick={onClick} active={active} />;
+      return <MobileNavbar onClick={onClick} active={active} data={data} />;
     default:
-      return <MainNavbar onClick={onClick} />;
+      return <MainNavbar onClick={onClick} data={data} />;
   }
 }
 
-function WholeNavbar({ type }) {
+function WholeNavbar({ type, data }) {
   const [show, setShow] = useState(false);
 
   const showNavbar = () => {
@@ -389,19 +384,19 @@ function WholeNavbar({ type }) {
   };
   return (
     <>
-      <GetNavbar type={type} onClick={showNavbar} />
-      <GetNavbar type="mobile" active={show} onClick={hideNavbar} />
+      <GetNavbar type={type} onClick={showNavbar} data={data} />
+      <GetNavbar type="mobile" active={show} onClick={hideNavbar} data={data} />
     </>
   );
 }
 
-export default function Navbar({ type }) {
+export default function Navbar({ type, data }) {
   switch (type) {
     case "main":
-      return <WholeNavbar type="main" />;
+      return <WholeNavbar type="main" data={data} />;
     case "static":
-      return <WholeNavbar type="static" />;
+      return <WholeNavbar type="static" data={data} />;
     default:
-      return <WholeNavbar type="main" />;
+      return <WholeNavbar type="main" data={data} />;
   }
 }
