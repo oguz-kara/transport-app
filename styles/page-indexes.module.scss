@@ -1,3 +1,31 @@
 .container {
-  text-align: center;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 30px auto;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 250ms ease;
+    &:hover {
+      color: #ffc61a;
+    }
+  }
+
+  .back {
+  }
+  .indexes {
+    margin: 25px;
+    .index {
+      margin: 0 10px;
+    }
+  }
+
+  .next {
+  }
 }

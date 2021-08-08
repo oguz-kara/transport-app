@@ -1,39 +1,23 @@
 import styles from "../styles/page-indexes.module.scss";
 import { useState, useEffect } from "react";
 
-export default function PageIndexes() {
-  /*
-        most messy component in the world!!!
-    */
-
-  const data = {
-    maxCardPerPage: 12,
-    indexRenderCount: 4,
-  };
+export default function PageIndexes({ posts, data, updateCurrentCards }) {
   const getTotalPageCount = (length) => {
     let numberOfPages = 0;
-    let result = [];
     numberOfPages = Math.ceil(length / data.maxCardPerPage);
-    console.log("number of pages", numberOfPages);
-    /*
-    for (let i = 1; i <= numberOfPages; i++) {
-      result.push(i);
-    }
-    */
 
     return numberOfPages;
   };
+
   const getInitialViewedIndexes = (renderCount) => {
     let initialViewedIndexes = [];
     renderCount =
-      renderCount > getTotalPageCount(49)
-        ? getTotalPageCount(49).length
+      renderCount > getTotalPageCount(posts.length)
+        ? getTotalPageCount(posts.length)
         : renderCount;
-    console.log("render count", renderCount);
     for (let i = 1; i <= renderCount; i++) {
       initialViewedIndexes.push(i);
     }
-    console.log("initial viewed indexes ", initialViewedIndexes);
     return initialViewedIndexes;
   };
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -56,14 +40,12 @@ export default function PageIndexes() {
       i <= currentIndex + data.indexRenderCount - 1;
       i++
     ) {
-      if (i >= getTotalPageCount(49)) {
+      if (i >= getTotalPageCount(posts.length)) {
         newIndexes.push(i);
-        console.log("increased interrupt rendered indexes ", newIndexes);
         return newIndexes;
       }
       newIndexes.push(i);
     }
-    console.log("increased rendered indexes ", newIndexes);
     return newIndexes;
   };
   const getDecreasedViewedIndexes = () => {
@@ -78,12 +60,10 @@ export default function PageIndexes() {
     ) {
       if (i <= 1) {
         newIndexes.push(i);
-        console.log("decreased interrupt rendered indexes ", newIndexes);
         return newIndexes.reverse();
       }
       newIndexes.push(i);
     }
-    console.log("decreased rendered indexes ", newIndexes);
     return newIndexes.reverse();
   };
 
@@ -92,16 +72,14 @@ export default function PageIndexes() {
       setInitial(false);
     }
     const index = parseInt(e.target.innerText);
-    console.log("dataset data ", index);
     setCurrentIndex(index);
-    console.log("current index", currentIndex);
   };
 
   const handleNext = (e) => {
     if (isInitial) {
       setInitial(false);
     }
-    if (!(currentIndex >= 49)) {
+    if (!(currentIndex >= posts.length)) {
       setCurrentIndex((prev) => prev + 1);
     }
   };
@@ -118,11 +96,12 @@ export default function PageIndexes() {
     if (!isInitial) {
       if (isLastIndexSelected()) {
         setViewedIndexes(getIncreasedViewedIndexes());
-      } else if (isFirstIndexSelected()) {
-        setViewedIndexes(getDecreasedViewedIndexes());
-      } else {
-        console.error("check page-indexes component something is wrong");
       }
+      if (isFirstIndexSelected()) {
+        setViewedIndexes(getDecreasedViewedIndexes());
+      }
+      updateCurrentCards(currentIndex, data.maxCardPerPage, posts);
+      window.scrollTo(0, 0);
     }
   }, [currentIndex]);
 

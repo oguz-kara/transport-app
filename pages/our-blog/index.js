@@ -11,7 +11,7 @@ export default function Posts() {
       <Topbar />
       <Navbar type="main" data={fakeData.navLinks} />
       <Hero pageName="our blog" />
-      <PostList />
+      <PostList posts={fakeData.posts} />
     </div>
   );
 }
