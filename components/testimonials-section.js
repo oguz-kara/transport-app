@@ -92,10 +92,9 @@ export default function TestimonialsSection() {
   const [state, setState] = useState(false);
 
   useEffect(() => {
-    console.log("window size ", windowSize);
-    if (windowSize.width <= 748 && windowSize.width > 500) {
+    if (windowSize.width <= 1000 && windowSize.width > 700) {
       testimonialsConEl.current.style.gridTemplateColumns = `repeat(${data.length}, 50%)`;
-    } else if (windowSize.width <= 500) {
+    } else if (windowSize.width <= 700) {
       testimonialsConEl.current.style.gridTemplateColumns = `repeat(${data.length}, 100%)`;
     } else {
       testimonialsConEl.current.style.gridTemplateColumns = `repeat(${data.length}, 33.33%)`;

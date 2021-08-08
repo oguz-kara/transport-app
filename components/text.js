@@ -14,6 +14,13 @@ const H4 = ({ text, className, style }) => {
     </h4>
   );
 };
+const P = ({ text, className, style }) => {
+  return (
+    <p style={style} className={className}>
+      {text}
+    </p>
+  );
+};
 
 export default function Text({ type, children, size, style }) {
   const getSize = (size) => {
@@ -26,6 +33,8 @@ export default function Text({ type, children, size, style }) {
         return styles.large;
       case "xLarge":
         return styles.xLarge;
+      case "xSmall":
+        return styles.xSmall;
       default:
         return styles.medium;
     }
@@ -45,6 +54,14 @@ export default function Text({ type, children, size, style }) {
           style={style}
           text={children}
           className={`${styles.yellow} ${getSize(size)}`}
+        />
+      );
+    case "p":
+      return (
+        <P
+          style={style}
+          text={children}
+          className={`${styles.p} ${getSize(size)}`}
         />
       );
     default:

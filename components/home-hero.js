@@ -2,10 +2,10 @@ import Navbar from "./navbar";
 import styles from "../styles/home-hero.module.scss";
 import Image from "next/image";
 
-export default function HomeHero() {
+export default function HomeHero({ children }) {
   return (
     <div className={styles.container}>
-      <Navbar type="static" />
+      {children}
       <div className={styles.heroHeader}>
         <h4>get taxi now</h4>
         <div className={styles.phone}>800-5-800</div>

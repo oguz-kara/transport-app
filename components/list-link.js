@@ -3,8 +3,9 @@ import Link from "next/link";
 import styles from "../styles/list-link.module.scss";
 import { ChevronRight } from "@material-ui/icons";
 
-export default function ListLink({ collapseable, children, items, href }) {
+export default function ListLink({ children, href, data }) {
   const [show, setShow] = useState(false);
+  const isCollapseable = data.innerLinks.length > 0;
 
   const handleClick = (e) => {
     setShow(!show);
@@ -13,11 +14,11 @@ export default function ListLink({ collapseable, children, items, href }) {
   return (
     <li
       className={`${styles.listItem} ${show && styles.active} ${
-        !show && styles.hoverBgWhite
+        !show && styles.bgWhite
       }`}
       onClick={(e) => handleClick(e)}
     >
-      {!collapseable ? (
+      {!isCollapseable ? (
         <Link href={href ? href : "/"} passHref>
           <a className={styles.navbarLink}>
             <span>{children}</span>
@@ -31,9 +32,9 @@ export default function ListLink({ collapseable, children, items, href }) {
           </span>
         </div>
       )}
-      {collapseable && (
+      {isCollapseable && (
         <ul className={`${styles.collapseMenu} ${show && styles.active}`}>
-          {items.map((item, index) => (
+          {data.innerLinks.map((item, index) => (
             <li key={index}>
               <Link href={item.href} passHref>
                 {item.name}

@@ -23,7 +23,7 @@
         font-weight: 700;
         font-size: 14px;
         margin: 0 10px;
-        a {
+        .listHeader {
           display: flex;
           align-items: center;
           position: relative;
@@ -138,7 +138,7 @@
         .chevronRightIcon:hover {
           transform: rotate(90deg);
         }
-        a.navbarLink {
+        .listHeader {
           display: flex;
           align-items: center;
           font-size: 16px;
@@ -191,7 +191,22 @@
     }
 
     #hamburger {
+      background-color: transparent;
+      background-image: none;
+      height: 45px;
+      width: 63px;
+      border-radius: 4px;
+      margin: 12px 15px;
+      padding: 2px 10px 4px;
+      position: relative;
+      cursor: pointer;
+      display: none;
       & > div {
+        background: #fff;
+        height: 4px;
+        width: 100%;
+        margin: 7px 0;
+        transition: all 0.2s;
       }
     }
   }
@@ -236,19 +251,15 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .navbarMain {
+  .navbarMain,
+  .navbarStatic {
     .nav {
       max-width: 1000px;
-      .navbarLinks {
+      flex-direction: row;
+      justify-content: space-between;
+      ul.navbarLinks {
         display: none;
-        ul {
-          padding: 0;
-
-          .listItem {
-            .collapseMenu {
-            }
-          }
-        }
+        padding: 0;
       }
       #hamburger {
         display: inline-block;

@@ -2,10 +2,16 @@
   padding: 30px 0px 100px;
   .header {
   }
+  .description {
+    max-width: 748px;
+    margin: 0 auto 50px auto;
+    padding: 0 30px;
+  }
   .servicesContainer {
     display: grid;
     padding: 0 40px 40px 40px;
     grid-template-columns: repeat(4, 25%);
+    align-items: center;
     .service {
       display: flex;
       flex-direction: column;
@@ -37,6 +43,7 @@
 }
 @media only screen and (max-width: 748px) {
   .container {
+    padding-bottom: 0;
     .servicesContainer {
       grid-template-columns: 100%;
     }

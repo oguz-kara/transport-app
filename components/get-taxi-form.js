@@ -8,9 +8,13 @@ import TripTypes from "./trip-types";
 import Text from "./text";
 
 export default function GetTaxiForm({ noHeader, fullWidth }) {
+  // comment
   const classFw = fullWidth ? styles.fullWidth : "";
   return (
-    <section className={`${styles.container} ${classFw}`}>
+    <section
+      className={`${styles.container} ${classFw}`}
+      style={{ backgroundColor: fullWidth && "#ffc61a" }}
+    >
       {!noHeader && (
         <div className={styles.top}>
           <Text type="yellow">OUR OPERATORS ARE WAITING FOR YOUR CALL:</Text>
@@ -21,10 +25,7 @@ export default function GetTaxiForm({ noHeader, fullWidth }) {
         {!noHeader && (
           <div className={styles.info}>Also you can order a taxi online</div>
         )}
-        <form
-          className={classFw}
-          style={{ padding: fullWidth && "200px 100px 100px 100px" }}
-        >
+        <form className={classFw}>
           <TripTypes />
           <div className={styles.form}>
             <div className={styles.row}>

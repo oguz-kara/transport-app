@@ -15,7 +15,7 @@
     padding: 0;
     line-height: 70px;
   }
-  .navbarLink {
+  .styledLink {
     padding: 10px 0;
   }
   .chevronRightIcon {
@@ -43,6 +43,20 @@
     }
   }
 }
-.hoverBgWhite:hover {
+
+.bgWhite {
+  transition: all 250ms ease-in-out;
+}
+
+.bgWhite:hover {
   background-color: #fff;
+}
+
+@media only screen and (max-width: 748px) {
+  .bgWhite:hover {
+    background-color: transparent;
+  }
+  .bgWhite:active {
+    background-color: #fff;
+  }
 }

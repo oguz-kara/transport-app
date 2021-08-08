@@ -43,3 +43,12 @@
     background-image: url(/assets/images/_icon-car-4.png);
   }
 }
+
+@media only screen and (max-width: 748px) {
+  .tripTypes {
+    flex-wrap: wrap;
+    .tripType {
+      margin: 0;
+    }
+  }
+}
