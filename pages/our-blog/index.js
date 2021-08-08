@@ -4,6 +4,7 @@ import Topbar from "../../components/topbar";
 import Hero from "../../components/hero";
 import styles from "../../styles/blog.module.scss";
 import fakeData from "../../fake_data.json";
+import BlogSidebar from "../../components/blog-siderbar";
 
 export default function Posts() {
   return (
@@ -11,7 +12,10 @@ export default function Posts() {
       <Topbar />
       <Navbar type="main" data={fakeData.navLinks} />
       <Hero pageName="our blog" />
-      <PostList posts={fakeData.posts} />
+      <div className={styles.main}>
+        <PostList posts={fakeData.posts} />
+        <BlogSidebar />
+      </div>
     </div>
   );
 }

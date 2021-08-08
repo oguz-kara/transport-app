@@ -58,7 +58,7 @@ function PostCard({ post }) {
 
 export default function PostList({ posts }) {
   const data = {
-    maxCardPerPage: 9,
+    maxCardPerPage: 6,
     indexRenderCount: 4,
   };
   const getInitialCards = (posts) => {
