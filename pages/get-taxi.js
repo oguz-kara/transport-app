@@ -31,7 +31,7 @@ export default function GetTaxi() {
       </Head>
       <Topbar />
       <Navbar type="main" data={fakeData.navLinks} />
-      <Hero />
+      <Hero pageName="get taxi" />
       <GetTaxiForm />
       <TariffsSection yellowTitle="see our" title="tariffs" />
       <GetMobileSection />
