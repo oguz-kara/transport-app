@@ -17,6 +17,15 @@
   .container {
     .main {
       flex-direction: column;
+      padding: 0 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    .main {
+      padding: 0 15px;
     }
   }
 }

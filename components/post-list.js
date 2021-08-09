@@ -87,7 +87,7 @@ export default function PostList({ posts, className }) {
         <PageIndexes
           posts={posts}
           data={data}
-          updateCurrentCards={updateCurrentPosts}
+          updateMethod={updateCurrentPosts}
         />
       </div>
     </div>

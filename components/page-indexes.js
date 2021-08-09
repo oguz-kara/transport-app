@@ -2,7 +2,7 @@ import styles from "../styles/page-indexes.module.scss";
 import { useState, useEffect } from "react";
 import { ArrowRight, ArrowLeft } from "@material-ui/icons";
 
-export default function PageIndexes({ posts, data, updateCurrentCards }) {
+export default function PageIndexes({ posts, data, updateMethod }) {
   const getTotalPageCount = (length) => {
     let numberOfPages = 0;
     numberOfPages = Math.ceil(length / data.maxCardPerPage);
@@ -101,7 +101,7 @@ export default function PageIndexes({ posts, data, updateCurrentCards }) {
       if (isFirstIndexSelected()) {
         setViewedIndexes(getDecreasedViewedIndexes());
       }
-      updateCurrentCards(currentIndex, data.maxCardPerPage, posts);
+      updateMethod(currentIndex, data.maxCardPerPage, posts);
       window.scrollTo(0, 0);
     }
   }, [currentIndex]);
