@@ -8,7 +8,7 @@ import { useState } from "react";
 function PostCard({ post }) {
   return (
     <li className={styles.postCard}>
-      <Link href="/" passHref>
+      <Link href={post.href ? post.href : "/"} passHref>
         <a className={styles.image}>
           <Image
             width={360}
@@ -56,7 +56,7 @@ function PostCard({ post }) {
   );
 }
 
-export default function PostList({ posts }) {
+export default function PostList({ posts, className }) {
   const data = {
     maxCardPerPage: 6,
     indexRenderCount: 4,
@@ -77,96 +77,11 @@ export default function PostList({ posts }) {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.className}`}>
       <ul className={styles.postCards}>
         {currentPosts.map((post, index) => (
           <PostCard key={index} post={post} />
         ))}
-
-        {/*
-  
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-        <PostCard
-          post={{
-            date: "17 august",
-            comments: 15,
-            likes: 30,
-            title: "How is it going",
-            description:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum at soluta obcaecati esse doloribus? Fugit atque animi suscipit earum ad?",
-          }}
-        />
-  
-  */}
       </ul>
       <div className={styles.pageIndexesContainer}>
         <PageIndexes

@@ -3,9 +3,9 @@ import styles from "../styles/blog-sidebar.module.scss";
 import { ChevronRight, Search } from "@material-ui/icons";
 import Text from "./text";
 
-export default function BlogSidebar() {
+export default function BlogSidebar({ className }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.className}`}>
       <div className={styles.categories}>
         <Text type="h1" className={styles.header}>
           Categories

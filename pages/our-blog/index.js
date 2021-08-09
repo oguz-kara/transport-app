@@ -13,8 +13,8 @@ export default function Posts() {
       <Navbar type="main" data={fakeData.navLinks} />
       <Hero pageName="our blog" />
       <div className={styles.main}>
-        <PostList posts={fakeData.posts} />
-        <BlogSidebar />
+        <PostList posts={fakeData.posts} className={styles.postList} />
+        <BlogSidebar className={styles.blogSidebar} />
       </div>
     </div>
   );

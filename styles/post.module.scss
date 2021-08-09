@@ -3,8 +3,9 @@
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    .postList {
+    .postSection {
       flex: 9;
+      margin: 65px 0;
     }
     .blogSidebar {
       flex: 3;

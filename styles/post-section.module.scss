@@ -1,0 +1,63 @@
+.container {
+  a.image {
+    img {
+      border-radius: 5px;
+    }
+  }
+  div.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #868686;
+    border-bottom: 1px dotted #868686;
+    .icon {
+      color: #ffc61a;
+      font-size: 16px;
+      margin-right: 5px;
+    }
+    .date {
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+    }
+    .likesComments {
+      display: flex;
+      align-items: center;
+      .comments {
+        display: flex;
+        margin-left: 10px;
+        padding: 15px 0;
+        span {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .likes {
+        display: flex;
+        span {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  div.content {
+    h3.title {
+      font-weight: 700;
+      font-size: 32px;
+      margin: 20px 0;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    p.description {
+      font-size: 14px;
+      position: relative;
+      line-height: 1.5em;
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 1.9em;
+      color: #1f1f1f;
+    }
+  }
+}
