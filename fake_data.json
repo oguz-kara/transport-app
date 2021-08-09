@@ -436,5 +436,274 @@
         }
       ]
     }
+  ],
+
+  "galleryData": [
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-2.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-2.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-3.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-2.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-3.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    },
+    {
+      "date": "some date",
+      "likes": 10,
+      "comments": 22,
+      "title": "some title",
+      "href": "/assets/images/_client-1.jpg"
+    }
   ]
 }

@@ -57,23 +57,18 @@ function PostCard({ post }) {
 }
 
 export default function PostList({ posts, className }) {
-  const data = {
+  const config = {
     maxCardPerPage: 6,
     indexRenderCount: 4,
   };
   const getInitialCards = (posts) => {
-    return posts.slice(0, data.maxCardPerPage);
+    return posts.slice(0, config.maxCardPerPage);
   };
   const [currentPosts, setCurrentPosts] = useState(getInitialCards(posts));
 
   const updateCurrentPosts = (currentIndex, maxCardPerPage, posts) => {
-    try {
-      const postsEnd = currentIndex * maxCardPerPage;
-      setCurrentPosts(posts.slice(postsEnd - maxCardPerPage, postsEnd));
-    } catch (err) {
-      const postsEnd = (currentIndex - 1) * maxCardPerPage;
-      setCurrentPosts(posts.slice(postEnd));
-    }
+    const postsEnd = currentIndex * maxCardPerPage;
+    setCurrentPosts(posts.slice(postsEnd - maxCardPerPage, postsEnd));
   };
 
   return (
@@ -85,8 +80,8 @@ export default function PostList({ posts, className }) {
       </ul>
       <div className={styles.pageIndexesContainer}>
         <PageIndexes
-          posts={posts}
-          data={data}
+          config={config}
+          data={posts}
           updateMethod={updateCurrentPosts}
         />
       </div>

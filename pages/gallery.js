@@ -12,7 +12,7 @@ export default function Gallery() {
       <Navbar type="main" data={fakeData.navLinks} />
       <Hero pageName="gallery" />
       <div className={styles.main}>
-        <GalleryCards />
+        <GalleryCards data={fakeData.galleryData} />
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import PageIndexes from "../components/page-indexes";
 import styles from "../styles/gallery-cards.module.scss";
 import { AccessTime, Favorite, Sms } from "@material-ui/icons";
 import Link from "next/link";
@@ -11,7 +13,7 @@ function GalleryCard({ data }) {
           <Image
             width={360}
             height={240}
-            src="/assets/images/_gallery-1.jpg"
+            src={data.href}
             alt="post"
             layout="responsive"
           />
@@ -45,50 +47,31 @@ function GalleryCard({ data }) {
 }
 
 export default function GalleryCards({ data }) {
+  const config = {
+    maxCardPerPage: 9,
+    indexRenderCount: 4,
+  };
+  const getInitialCards = (data) => {
+    return data.slice(0, config.maxCardPerPage);
+  };
+  const [currentCards, setCurrentCards] = useState(getInitialCards(data));
+
+  const updateCurrentCards = (currentIndex, maxCardPerPage, data) => {
+    const cardsEnd = currentIndex * maxCardPerPage;
+    setCurrentCards(data.slice(cardsEnd - maxCardPerPage, cardsEnd));
+  };
   return (
     <div className={styles.container}>
       <div className={styles.galleryCards}>
-        <GalleryCard
-          data={{
-            date: "some date",
-            likes: 10,
-            comments: 22,
-            title: "some title",
-          }}
-        />
-        <GalleryCard
-          data={{
-            date: "some date",
-            likes: 10,
-            comments: 22,
-            title: "some title",
-          }}
-        />
-        <GalleryCard
-          data={{
-            date: "some date",
-            likes: 10,
-            comments: 22,
-            title: "some title",
-          }}
-        />
-        <GalleryCard
-          data={{
-            date: "some date",
-            likes: 10,
-            comments: 22,
-            title: "some title",
-          }}
-        />
-        <GalleryCard
-          data={{
-            date: "some date",
-            likes: 10,
-            comments: 22,
-            title: "some title",
-          }}
-        />
+        {currentCards.map((card, index) => (
+          <GalleryCard key={index} data={card} />
+        ))}
       </div>
+      <PageIndexes
+        data={data}
+        config={config}
+        updateMethod={updateCurrentCards}
+      />
     </div>
   );
 }

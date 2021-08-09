@@ -2,10 +2,10 @@ import styles from "../styles/page-indexes.module.scss";
 import { useState, useEffect } from "react";
 import { ArrowRight, ArrowLeft } from "@material-ui/icons";
 
-export default function PageIndexes({ posts, data, updateMethod }) {
+export default function PageIndexes({ data, config, updateMethod }) {
   const getTotalPageCount = (length) => {
     let numberOfPages = 0;
-    numberOfPages = Math.ceil(length / data.maxCardPerPage);
+    numberOfPages = Math.ceil(length / config.maxCardPerPage);
 
     return numberOfPages;
   };
@@ -13,8 +13,8 @@ export default function PageIndexes({ posts, data, updateMethod }) {
   const getInitialViewedIndexes = (renderCount) => {
     let initialViewedIndexes = [];
     renderCount =
-      renderCount > getTotalPageCount(posts.length)
-        ? getTotalPageCount(posts.length)
+      renderCount > getTotalPageCount(data.length)
+        ? getTotalPageCount(data.length)
         : renderCount;
     for (let i = 1; i <= renderCount; i++) {
       initialViewedIndexes.push(i);
@@ -23,12 +23,12 @@ export default function PageIndexes({ posts, data, updateMethod }) {
   };
   const [currentIndex, setCurrentIndex] = useState(1);
   const [viewedIndexes, setViewedIndexes] = useState(
-    getInitialViewedIndexes(data.indexRenderCount)
+    getInitialViewedIndexes(config.indexRenderCount)
   );
   const [isInitial, setInitial] = useState(true);
 
   const isLastIndexSelected = () => {
-    return viewedIndexes[data.indexRenderCount - 1] === currentIndex;
+    return viewedIndexes[config.indexRenderCount - 1] === currentIndex;
   };
   const isFirstIndexSelected = () => {
     return viewedIndexes[0] === currentIndex;
@@ -38,10 +38,10 @@ export default function PageIndexes({ posts, data, updateMethod }) {
 
     for (
       let i = currentIndex;
-      i <= currentIndex + data.indexRenderCount - 1;
+      i <= currentIndex + config.indexRenderCount - 1;
       i++
     ) {
-      if (i >= getTotalPageCount(posts.length)) {
+      if (i >= getTotalPageCount(data.length)) {
         newIndexes.push(i);
         return newIndexes;
       }
@@ -56,7 +56,7 @@ export default function PageIndexes({ posts, data, updateMethod }) {
     }
     for (
       let i = currentIndex;
-      i >= currentIndex - data.indexRenderCount + 1;
+      i >= currentIndex - config.indexRenderCount + 1;
       i--
     ) {
       if (i <= 1) {
@@ -80,7 +80,7 @@ export default function PageIndexes({ posts, data, updateMethod }) {
     if (isInitial) {
       setInitial(false);
     }
-    if (!(currentIndex >= posts.length)) {
+    if (!(currentIndex >= data.length)) {
       setCurrentIndex((prev) => prev + 1);
     }
   };
@@ -101,7 +101,7 @@ export default function PageIndexes({ posts, data, updateMethod }) {
       if (isFirstIndexSelected()) {
         setViewedIndexes(getDecreasedViewedIndexes());
       }
-      updateMethod(currentIndex, data.maxCardPerPage, posts);
+      updateMethod(currentIndex, config.maxCardPerPage, data);
       window.scrollTo(0, 0);
     }
   }, [currentIndex]);
@@ -132,10 +132,10 @@ export default function PageIndexes({ posts, data, updateMethod }) {
       </div>
       <button
         className={`${styles.next}  ${
-          posts.length === currentIndex && styles.disabled
+          data.length === currentIndex && styles.disabled
         }`}
         onClick={(e) => handleNext(e)}
-        disabled={posts.length === currentIndex}
+        disabled={data.length === currentIndex}
       >
         <span>next</span>
         <span className={styles.icon}>
