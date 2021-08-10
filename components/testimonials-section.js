@@ -6,7 +6,7 @@ import Image from "next/image";
 import Text from "./text";
 import fakeData from "../fake_data.json";
 
-export default function TestimonialsSection() {
+export default function TestimonialsSection({ data }) {
   const testimonialsConEl = useRef(null);
   const testimonialEl = useRef(null);
   const windowSize = useWindowSize();

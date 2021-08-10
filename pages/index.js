@@ -28,7 +28,7 @@ export default function Home() {
       <ServicesSection />
       <TariffsSection yellowTitle="see our" title="tariffs" />
       <GetMobileSection />
-      <TestimonialsSection />
+      <TestimonialsSection data={fakeData.testimonials} />
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function ListLink({ children, href, data }) {
       onClick={(e) => handleClick(e)}
     >
       {!isCollapseable ? (
-        <Link href={href ? href : "/"} passHref>
+        <Link href={data.href ? data.href : "/"} passHref>
           <a className={styles.navbarLink}>
             <span>{children}</span>
           </a>

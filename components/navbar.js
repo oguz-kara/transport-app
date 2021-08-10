@@ -28,20 +28,22 @@ function StaticNavbar({ onClick, data }) {
   return (
     <div className={styles.navbarStatic}>
       <nav className={styles.nav}>
-        <div className={styles.navbarBrand}>
-          <Image
-            src="/assets/images/logo-inner.png"
-            alt="taxi"
-            width={163}
-            height={42}
-          />
-        </div>
+        <Link href="/" passHref>
+          <a className={styles.navbarBrand}>
+            <Image
+              src="/assets/images/logo-inner.png"
+              alt="taxi"
+              width={163}
+              height={42}
+            />
+          </a>
+        </Link>
         <ul className={styles.navbarLinks}>
           {data.map((linkObj, index) =>
             linkObj.innerLinks.length > 0 ? (
               <li key={index} className={styles.listItem}>
                 <div className={styles.listHeader}>
-                  <span>{linkObj.name}</span>
+                  <span className={styles.navItem}>{linkObj.name}</span>
                   <span>
                     <ChevronRight className={styles.chevronRightIcon} />
                   </span>
@@ -50,7 +52,7 @@ function StaticNavbar({ onClick, data }) {
                   {linkObj.innerLinks.map((innerLink, index) => (
                     <li key={index}>
                       <Link href={innerLink.href} passHref>
-                        {innerLink.name}
+                        <a>{innerLink.name}</a>
                       </Link>
                     </li>
                   ))}
@@ -59,7 +61,7 @@ function StaticNavbar({ onClick, data }) {
             ) : (
               <li className={styles.listItem}>
                 <Link href={linkObj.href} passHref>
-                  {linkObj.name}
+                  <a className={styles.navItem}>{linkObj.name}</a>
                 </Link>
               </li>
             )
@@ -78,20 +80,22 @@ function MainNavbar({ onClick, data }) {
   return (
     <div className={styles.navbarMain}>
       <nav className={styles.nav}>
-        <div className={styles.navbarBrand}>
-          <Image
-            src="/assets/images/logo-inner.png"
-            alt="taxi"
-            width={163}
-            height={42}
-          />
-        </div>
+        <Link href="/" passHref>
+          <a className={styles.navbarBrand}>
+            <Image
+              src="/assets/images/logo-inner.png"
+              alt="taxi"
+              width={163}
+              height={42}
+            />
+          </a>
+        </Link>
         <ul className={styles.navbarLinks}>
           {data.map((dataObj, index) =>
             dataObj.innerLinks.length > 0 ? (
               <li key={index} className={styles.listItem}>
                 <div className={styles.listHeader}>
-                  <span>{dataObj.name}</span>
+                  <span className={styles.navItem}>{dataObj.name}</span>
                   <span>
                     <ChevronRight className={styles.chevronRightIcon} />
                   </span>
@@ -100,7 +104,7 @@ function MainNavbar({ onClick, data }) {
                   {dataObj.innerLinks.map((innerLink, index) => (
                     <li key={index}>
                       <Link href={innerLink.href} passHref>
-                        {innerLink.name}
+                        <a>{innerLink.name}</a>
                       </Link>
                     </li>
                   ))}
@@ -109,7 +113,7 @@ function MainNavbar({ onClick, data }) {
             ) : (
               <li key={index} className={styles.listItem}>
                 <Link href={dataObj.href} passHref>
-                  {dataObj.name}
+                  <a className={styles.navItem}>{dataObj.name}</a>
                 </Link>
               </li>
             )

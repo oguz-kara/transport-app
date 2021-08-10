@@ -38,7 +38,7 @@ export default function Services() {
         backgroundUrl="/assets/images/_tariff-bg.jpg"
         titleColor="#fff"
       />
-      <TestimonialsSection />
+      <TestimonialsSection data={fakeData.testimonials} />
     </div>
   );
 }
