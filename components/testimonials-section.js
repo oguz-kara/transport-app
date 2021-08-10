@@ -4,86 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import useWindowSize from "../hooks/useWindowSize";
 import Image from "next/image";
 import Text from "./text";
-
-const data = [
-  {
-    id: 1,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 2,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 3,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 4,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 5,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 6,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 7,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 8,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 9,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 10,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-  {
-    id: 11,
-    author: "Sara Jay",
-    comment:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
-    src: "/assets/images/_client-1.jpg",
-  },
-];
+import fakeData from "../fake_data.json";
 
 export default function TestimonialsSection() {
   const testimonialsConEl = useRef(null);
@@ -124,7 +45,7 @@ export default function TestimonialsSection() {
         </Text>
       </div>
       <div className={styles.testimonials} ref={testimonialsConEl}>
-        {data.map((item, index) => (
+        {fakeData.testimonials.map((item, index) => (
           <div key={index} className={styles.testimonial} ref={testimonialEl}>
             <div className={styles.comment}>{item.comment}</div>
             <div className={styles.quote}>

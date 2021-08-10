@@ -1,0 +1,53 @@
+.container {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-100%);
+  .close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 32px;
+    z-index: 100;
+  }
+  .imageContainer {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  .actions {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    margin: 0 auto;
+    background-color: #000;
+    padding: 20px;
+    cursor: pointer;
+    button {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      margin: 5px;
+      .icon {
+        font-size: 32px;
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}
+.active {
+  transform: translateX(0);
+}

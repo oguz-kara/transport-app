@@ -37,7 +37,6 @@ function Comment({ comment, style }) {
 }
 
 export default function CommetsSection({ comments }) {
-  console.log("comments section ", comments);
   return (
     <div className={styles.container}>
       <Text type="h1" size="large" className={styles.title}>

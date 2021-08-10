@@ -440,6 +440,7 @@
 
   "galleryData": [
     {
+      "id": 1,
       "date": "some date",
       "likes": 10,
       "comments": 22,
@@ -447,6 +448,7 @@
       "href": "/assets/images/_client-2.jpg"
     },
     {
+      "id": 2,
       "date": "some date",
       "likes": 10,
       "comments": 22,
@@ -454,6 +456,7 @@
       "href": "/assets/images/_client-1.jpg"
     },
     {
+      "id": 3,
       "date": "some date",
       "likes": 10,
       "comments": 22,
@@ -461,6 +464,7 @@
       "href": "/assets/images/_client-1.jpg"
     },
     {
+      "id": 4,
       "date": "some date",
       "likes": 10,
       "comments": 22,
@@ -468,6 +472,7 @@
       "href": "/assets/images/_client-1.jpg"
     },
     {
+      "id": 5,
       "date": "some date",
       "likes": 10,
       "comments": 22,
@@ -475,235 +480,80 @@
       "href": "/assets/images/_client-1.jpg"
     },
     {
+      "id": 6,
       "date": "some date",
       "likes": 10,
       "comments": 22,
       "title": "some title",
       "href": "/assets/images/_client-1.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 2,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 3,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 4,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-2.jpg"
+      "id": 5,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 6,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-3.jpg"
+      "id": 7,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 8,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 9,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 10,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     },
     {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-2.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-3.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
-    },
-    {
-      "date": "some date",
-      "likes": 10,
-      "comments": 22,
-      "title": "some title",
-      "href": "/assets/images/_client-1.jpg"
+      "id": 11,
+      "author": "Sara Jay",
+      "comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta praesentium reiciendis facilis quasi. Dolore in minima dolorem eius consequatur.",
+      "src": "/assets/images/_client-1.jpg"
     }
   ]
 }

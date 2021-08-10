@@ -10,7 +10,6 @@ import Head from "next/head";
 import fakeData from "../fake_data.json";
 
 export default function Home() {
-  console.log("navLinks", fakeData.navLinks);
   return (
     <div className={styles.container}>
       <Head>

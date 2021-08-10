@@ -1,0 +1,46 @@
+.container {
+  .testimonialList {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    max-width: 1200px;
+    margin: 50px auto;
+    .testimonial {
+      position: relative;
+      background-color: #fff;
+      padding: 35px 35px 120px;
+      text-align: center;
+      margin: 0 20px 60px 20px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      .comment {
+        color: #1f1f1f;
+        font-style: italic;
+        font-size: 14px;
+      }
+      .quote {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        left: 0;
+        margin: 30px 0 15px;
+
+        .author {
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+        .avatar {
+          position: absolute;
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
