@@ -44,3 +44,21 @@
     }
   }
 }
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    .testimonialList {
+      grid-template-columns: 50% 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    .testimonialList {
+      max-width: 800px;
+      padding: 0 10px;
+      grid-template-columns: 100%;
+    }
+  }
+}
