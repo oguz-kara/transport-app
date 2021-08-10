@@ -1,0 +1,17 @@
+.container {
+  .main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 1200px;
+    margin: 50px auto;
+    min-height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    .main {
+      grid-template-columns: 100%;
+    }
+  }
+}

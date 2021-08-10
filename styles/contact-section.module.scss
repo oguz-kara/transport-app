@@ -1,0 +1,108 @@
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 25px 0;
+  font-family: "Fira Sans Condensed";
+  .header {
+    height: 70px;
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffc61a;
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+    .hours {
+      font-size: 42px;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+  }
+  .description {
+    color: #1f1f1f;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    font-family: "Open Sans", "Helvetica Neue", Helvetica;
+  }
+  .contactInfo {
+    font-weight: bold;
+    .phone {
+      .phoneNumber {
+        font-size: 28px;
+        vertical-align: middle;
+      }
+      margin-bottom: 20px;
+    }
+    .adress {
+      .addressLine {
+        vertical-align: middle;
+      }
+      margin-bottom: 20px;
+    }
+    .icon {
+      margin-right: 10px;
+      color: #ffc61a;
+      font-size: 28px;
+      vertical-align: middle;
+    }
+  }
+
+  .socialLinks {
+    .title {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica;
+      font-weight: bold;
+    }
+    .links {
+      display: table;
+      border-collapse: separate;
+      border-spacing: 5px;
+      a {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+      }
+      .socialLink {
+        font-size: 28px;
+        color: #fff;
+      }
+      #facebook {
+        background-color: #4e71a8;
+      }
+      #twitter {
+        background-color: #1cb7eb;
+      }
+      #youtube {
+        background-color: #c93737;
+      }
+      #instagram {
+        background-color: #444444;
+      }
+    }
+  }
+
+  .getTaxiBtn {
+    border-radius: 30px;
+    border: 2px solid #000;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica;
+    font-size: 16px;
+    margin-top: 30px;
+    background-color: transparent;
+    transition: all 250ms ease;
+    &:hover {
+      background-color: #000;
+      color: #ffc61a;
+    }
+  }
+
+  .textAlignLeft {
+    text-align: left !important;
+  }
+}
