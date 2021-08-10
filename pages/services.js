@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "../components/hero";
 import Topbar from "../components/topbar";
 import Navbar from "../components/navbar";
 import TariffsSection from "../components/tariffs-section";
@@ -21,6 +22,7 @@ export default function Services() {
       </Head>
       <Topbar />
       <Navbar type="main" data={fakeData.navLinks} />
+      <Hero pageName="services" />
       <div className={styles.servicesContainer}>
         <ServicesSection>
           Null egestas ante sit amet tincidunt bibendum. Duis id aliquet tellus,

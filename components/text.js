@@ -22,7 +22,7 @@ const P = ({ text, className, style }) => {
   );
 };
 
-export default function Text({ type, children, size, style }) {
+export default function Text({ type, children, size, style, className }) {
   const getSize = (size) => {
     switch (size) {
       case "small":
@@ -45,7 +45,7 @@ export default function Text({ type, children, size, style }) {
         <H2
           style={style}
           text={children}
-          className={`${styles.h1} ${getSize(size)} `}
+          className={`${styles.h1} ${getSize(size)} ${className}`}
         />
       );
     case "yellow":
@@ -53,7 +53,7 @@ export default function Text({ type, children, size, style }) {
         <H4
           style={style}
           text={children}
-          className={`${styles.yellow} ${getSize(size)}`}
+          className={`${styles.yellow} ${getSize(size)} ${className}`}
         />
       );
     case "p":
@@ -61,7 +61,7 @@ export default function Text({ type, children, size, style }) {
         <P
           style={style}
           text={children}
-          className={`${styles.p} ${getSize(size)}`}
+          className={`${styles.p} ${getSize(size)} ${className}`}
         />
       );
     default:

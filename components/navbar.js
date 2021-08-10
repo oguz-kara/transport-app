@@ -37,137 +37,33 @@ function StaticNavbar({ onClick, data }) {
           />
         </div>
         <ul className={styles.navbarLinks}>
-          {
-            data.map((linkObj, index) =>
-              linkObj.innerLinks.length > 0 ? (
-                <li className={styles.listItem}>
-                  <div className={styles.listHeader}>
-                    <span>{linkObj.name}</span>
-                    <span>
-                      <ChevronRight className={styles.chevronRightIcon} />
-                    </span>
-                  </div>
-                  <ul className={styles.collapseMenu}>
-                    {linkObj.innerLinks.map((innerLink, index) => (
-                      <li key={index}>
-                        <Link href={innerLink.href} passHref>
-                          {innerLink.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ) : (
-                <li className={styles.listItem}>
-                  <Link href={linkObj.href} passHref>
-                    {linkObj.name}
-                  </Link>
-                </li>
-              )
+          {data.map((linkObj, index) =>
+            linkObj.innerLinks.length > 0 ? (
+              <li key={index} className={styles.listItem}>
+                <div className={styles.listHeader}>
+                  <span>{linkObj.name}</span>
+                  <span>
+                    <ChevronRight className={styles.chevronRightIcon} />
+                  </span>
+                </div>
+                <ul className={styles.collapseMenu}>
+                  {linkObj.innerLinks.map((innerLink, index) => (
+                    <li key={index}>
+                      <Link href={innerLink.href} passHref>
+                        {innerLink.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li className={styles.listItem}>
+                <Link href={linkObj.href} passHref>
+                  {linkObj.name}
+                </Link>
+              </li>
             )
-            /*
-          
-          
-          
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              services
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>our blog</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>gallery</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              testimonials
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              contact
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>pages</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          
-          */
-          }
+          )}
         </ul>
         <div id={styles.hamburger} onClick={(e) => onClick(e)}>
           <div></div>
@@ -218,137 +114,6 @@ function MainNavbar({ onClick, data }) {
               </li>
             )
           )}
-          {/*
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>home</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/get-taxi" passHref>
-              get taxi
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              services
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>our blog</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>gallery</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              testimonials
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              contact
-            </Link>
-          </li>
-          <li className={styles.listItem}>
-            <Link href="/" passHref>
-              <a className={styles.navbarLink}>
-                <span>pages</span>
-                <span>
-                  <ChevronRight className={styles.chevronRightIcon} />
-                </span>
-              </a>
-            </Link>
-            <ul className={styles.collapseMenu}>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link 2
-                </Link>
-              </li>
-              <li>
-                <Link href="/" passHref>
-                  Some link
-                </Link>
-              </li>
-            </ul>
-          </li>
-          
-          */}
         </ul>
         <div id={styles.hamburger} onClick={() => onClick()}>
           <div></div>

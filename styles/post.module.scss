@@ -1,0 +1,31 @@
+.container {
+  .main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    .postSection {
+      flex: 9;
+      margin: 65px 0;
+    }
+    .blogSidebar {
+      flex: 3;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .container {
+    .main {
+      flex-direction: column;
+      padding: 0 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    .main {
+      padding: 0 15px;
+    }
+  }
+}

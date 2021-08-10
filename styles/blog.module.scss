@@ -1,0 +1,21 @@
+.container {
+  .main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    .postList {
+      flex: 9;
+    }
+    .blogSidebar {
+      flex: 3;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .container {
+    .main {
+      flex-direction: column;
+    }
+  }
+}
