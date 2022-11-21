@@ -8,7 +8,7 @@
 
 ### Desktop showcase video
 
-![AppShowcase](./public/assets/videos/app_view_taxi.mp4)
+![AppShowcase](./public/assets/videos/app_view_taxi.gif)
 
 ### Mobile showcase screentshoots
 
